@@ -123,6 +123,12 @@ pip install poetry
 
 1. Crie um repositório público, utilizando este repositório como template. Para isso, clique sobre o botão "**Use this template**", no canto superior direito desta tela. Forks **não** serão aceitos.
 
+2.	Instale as dependências do projeto utilizando o Poetry:
+
+```bash
+cd realmate-challenge
+poetry install
+```
 # Antes de instalar as dependências, crie e ative um venv:
 > **Nota:** seção adicionada por Levi.
 ```bash
@@ -130,14 +136,6 @@ python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
-
-2.	Instale as dependências do projeto utilizando o Poetry:
-
-```bash
-cd realmate-challenge
-poetry install
-```
-
 3.	Aplique as migrações no banco de dados SQLite:
 
 ```bash
