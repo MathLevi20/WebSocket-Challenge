@@ -5,6 +5,10 @@ Tentei manter tudo simples, funcional e bem organizado.
 
 Fique à vontade para explorar, testar e, claro, sugerir qualquer melhoria!
 
+Desejo muito sucesso a toda a equipe, especialmente no uso e evolução do CRM com chatbots  — que com certeza tem um enorme potencial. 
+Espero contribuir, com esse propósito.
+
+
 Abraços,  
 **Matheus Levi**
 
@@ -34,3 +38,12 @@ python manage.py migrate
 
 # 4. Execute o servidor de desenvolvimento
 python manage.py runserver
+
+## Rotas da API
+- **GET /**: Retorna `{ "message": "API está funcionando" }` para verificar o status.
+- **POST /webhook/**: Recebe e processa eventos de conversas e mensagens.
+- **GET /conversations/{id}/**: Retorna detalhes (status e mensagens) de uma conversa pelo UUID.
+- **GET /admin/**: Acesso ao painel de administração do Django.
+- **GET /swagger.json**: Esquema OpenAPI em formato JSON.
+- **GET /swagger/**: Interface interativa Swagger UI.
+- **GET /redoc/**: Interface interativa Redoc.
