@@ -121,9 +121,15 @@ pip install poetry
 > [!WARNING]  
 > Siga todas as instruções de instalação do projeto. O descumprimento dos requisitos de instalação acarretará a desclassificação do(a) candidato(a).
 
-1.	Crie um repositório público, utilizando este repositório como template. Para isso, clique sobre o botão "**Use this template**", no canto superio direito desta tela. Forks **não** serão aceitos.
+1. Crie um repositório público, utilizando este repositório como template. Para isso, clique sobre o botão "**Use this template**", no canto superior direito desta tela. Forks **não** serão aceitos.
 
-
+# Antes de instalar as dependências, crie e ative um venv:
+> **Nota:** seção adicionada por Levi.
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
 
 2.	Instale as dependências do projeto utilizando o Poetry:
 
@@ -144,6 +150,14 @@ python manage.py migrate
 python manage.py runserver
 ```
 
+## Rotas da API
+- **GET /**: Retorna `{ "message": "API está funcionando" }` para verificar o status.
+- **POST /webhook/**: Recebe e processa eventos de conversas e mensagens.
+- **GET /conversations/{id}/**: Retorna detalhes (status e mensagens) de uma conversa pelo UUID.
+- **GET /admin/**: Acesso ao painel de administração do Django.
+- **GET /swagger.json**: Esquema OpenAPI em formato JSON.
+- **GET /swagger/**: Interface interativa Swagger UI.
+- **GET /redoc/**: Interface interativa Redoc.
 
 ## 📌 Entrega e Requisitos
 
